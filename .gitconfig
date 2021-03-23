@@ -1,3 +1,5 @@
+[pull]
+	rebase = true
 [alias]
     la = config --global --get-regexp 'alias..*'
     ls = log -12 --oneline
