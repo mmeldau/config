@@ -1,16 +1,22 @@
+[fetch]
+	prune = true
 [pull]
 	rebase = true
+[push]
+	default = current
 [alias]
-    la = config --global --get-regexp 'alias..*'
-    ls = log -12 --oneline
-    ll = log --oneline
-    st = status -sb
-    br = branch -v
-    brv = branch -vv
-    last = diff HEAD~1
-    co = checkout
-    sw = switch
-    back = switch -
-    ci = commit -m
-    fpush = push --force-with-lease
-    se = !git rev-list --all | xargs git grep -F
+	la = config --global --get-regexp 'alias..*'
+	ls = log -12 --oneline
+	ll = log --oneline
+	st = status -sb
+	br = branch -v
+	brv = branch -vv
+	last = diff HEAD~1
+	co = checkout
+	sw = switch
+	back = switch -
+	ci = commit -m
+	ibase = rebase -i
+	fpush = push --force-with-lease
+	publish = push --set-upstream origin HEAD
+	se = !git rev-list --all | xargs git grep -F
